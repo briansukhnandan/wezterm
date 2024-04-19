@@ -39,12 +39,12 @@ config.keys = {
 
   -- Multiplexing
   {
-    key = "h",
+    key = "v",
     mods = "CTRL|SHIFT",
     action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" },
   },
   {
-    key = "v",
+    key = "h",
     mods = "CTRL|SHIFT",
     action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" },
   },
