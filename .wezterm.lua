@@ -2,12 +2,19 @@ local wezterm = require "wezterm"
 local config = wezterm.config_builder()
 local act = wezterm.action
 
-local backgroundColor = "#363636"
+local baseBackgroundColor = "#363636"
+local baseForegroundColor = "#f6ecff"
 
 -- Appearance
 config.color_scheme = "Catppuccin Frappe"
 config.colors = {
-  background = backgroundColor
+  background = baseBackgroundColor,
+  foreground = baseForegroundColor,
+  tab_bar = {
+    -- The color of the inactive tab bar edge/divider
+    -- I personally don't like it so I set it as bg.
+    inactive_tab_edge = baseBackgroundColor,
+  },
 }
 
 config.enable_scroll_bar = true
@@ -113,7 +120,7 @@ end
 wezterm.on(
   "format-tab-title",
   function(tab, tabs, panes, config, hover, max_width)
-    local edge_background = backgroundColor
+    local edge_background = baseBackgroundColor
     local colors = {
       -- Red
       {
@@ -144,7 +151,7 @@ wezterm.on(
           foreground = "#d7fdd3"
         },
         active = {
-          background = "#3ef42b",
+          background = "#00ab0a",
           foreground = "#fffefb"
         }
       },
