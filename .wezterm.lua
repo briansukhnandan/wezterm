@@ -104,19 +104,69 @@ function tab_title(tab_info)
   return tab_info.active_pane.title
 end
 
+function lenTable(T)
+  local idx = 0
+  for _ in pairs(T) do idx = idx + 1 end
+  return idx
+end
+
 wezterm.on(
-  'format-tab-title',
+  "format-tab-title",
   function(tab, tabs, panes, config, hover, max_width)
     local edge_background = backgroundColor
-    local background = '#5d3a05'
-    local foreground = '#808080'
+    local colors = {
+      -- Red
+      {
+        default = {
+          background = "#720b0e",
+          foreground = "#fce0e1"
+        },
+        active = {
+          background = "#e92126",
+          foreground = "#facfd0"
+        }
+      },
+      -- Orange/Yellow
+      {
+        default = {
+          background = "#5d3a05",
+          foreground = "#808080"
+        },
+        active = {
+          background = "#d1b40d",
+          foreground = "#fffefb"
+        }
+      },
+      -- Green
+      {
+        default = {
+          background = "#094003",
+          foreground = "#d7fdd3"
+        },
+        active = {
+          background = "#3ef42b",
+          foreground = "#fffefb"
+        }
+      },
+      -- Blue/Purple
+      {
+        default = {
+          background = "#3c1176",
+          foreground = "#e8dafa"
+        },
+        active = {
+          background = "#975be7",
+          foreground = "#fdfcff"
+        }
+      },
+    }
+
+    local background = colors[(tab.tab_index) % lenTable(colors) + 1].default.background
+    local foreground = colors[(tab.tab_index) % lenTable(colors) + 1].default.foreground
 
     if tab.is_active then
-      background = '#ca7d0b'
-      foreground = '#c0c0c0'
-    elseif hover then
-      background = '#5d3a05'
-      foreground = '#909090'
+      background = colors[(tab.tab_index) % lenTable(colors) + 1].active.background
+      foreground = colors[(tab.tab_index) % lenTable(colors) + 1].active.foreground
     end
 
     local edge_foreground = background
