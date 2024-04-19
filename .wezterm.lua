@@ -23,6 +23,18 @@ config.keys = {
     action = act.ClearScrollback "ScrollbackAndViewport",
   },
 
+  -- Copy/Paste
+  {
+    key = "c",
+    mods = "ALT",
+    action = wezterm.action.CopyTo "ClipboardAndPrimarySelection",
+  },
+  {
+    key = "v",
+    mods = "ALT",
+    action = act.PasteFrom "Clipboard"
+  },
+
   -- Multiplexing
   {
     key = "h",

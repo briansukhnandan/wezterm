@@ -5,6 +5,7 @@
 - Has some opinionated choices such as enabling scrollbar and disabling the new tab button.
 
 ## My personal bindings.
+- `ALT+c/v` - Copy/Paste from clipboard.
 - `CTRL+SHIFT+h/v` - Horizontal/Veritcal splits on the current pane.
 - `CTRL+SHIFT+w` - Close current pane.
 - `CTRL+SHIFT+c` - Clear the current view.
