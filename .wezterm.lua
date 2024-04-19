@@ -155,7 +155,7 @@ wezterm.on(
           foreground = "#e8dafa"
         },
         active = {
-          background = "#975be7",
+          background = "#622de6",
           foreground = "#fdfcff"
         }
       },
