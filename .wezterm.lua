@@ -61,7 +61,7 @@ config.keys = {
     action = wezterm.action.CloseCurrentPane { confirm = true },
 
   },
-  -- Pane resizing - uses vim bindings
+  -- Pane resizing - uses Arrow keys
   {
     key = "LeftArrow",
     mods = "CTRL|ALT",
@@ -82,6 +82,16 @@ config.keys = {
     action = act.AdjustPaneSize { "Right", 3 },
   },
 }
+
+-- Allows us to use CTRL+ALT+{1 -> 8} to move a tab to 
+-- that specified idx.
+for i = 1, 8 do
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = 'CTRL|ALT',
+    action = wezterm.action.MoveTab(i - 1),
+  })
+end
 
 config.skip_close_confirmation_for_processes_named = {
   "bash",
