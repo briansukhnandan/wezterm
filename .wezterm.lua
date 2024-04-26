@@ -63,21 +63,21 @@ config.keys = {
   },
   -- Pane resizing - uses vim bindings
   {
-    key = "h",
+    key = "LeftArrow",
     mods = "CTRL|ALT",
     action = act.AdjustPaneSize { "Left", 3 },
   },
   {
-    key = "j",
+    key = "DownArrow",
     mods = "CTRL|ALT",
     action = act.AdjustPaneSize { "Down", 3 },
   },
   {
-    key = "k", 
+    key = "UpArrow", 
     mods = "CTRL|ALT", 
     action = act.AdjustPaneSize { "Up", 3 } },
   {
-    key = "l",
+    key = "RightArrow",
     mods = "CTRL|ALT",
     action = act.AdjustPaneSize { "Right", 3 },
   },
@@ -137,7 +137,7 @@ wezterm.on(
       {
         default = {
           background = "#5d3a05",
-          foreground = "#808080"
+          foreground = "#fce0e1"
         },
         active = {
           background = "#d1b40d",
@@ -155,7 +155,18 @@ wezterm.on(
           foreground = "#fffefb"
         }
       },
-      -- Blue/Purple
+      -- Blue
+      {
+        default = {
+          background = "#003eb9",
+          foreground = "#e3ecff"
+        },
+        active = {
+          background = "#4583ff",
+          foreground = "#fdfcff"
+        }
+      },
+      -- Purple
       {
         default = {
           background = "#3c1176",
