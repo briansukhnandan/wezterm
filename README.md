@@ -1,5 +1,8 @@
 # WezTerm
 
+## Installation
+- `git clone $URL && mv wezterm/.wezterm.lua ~/ && rm -r wezterm/`
+
 ## Notes
 - Uses the Catppuccin Frappe colorscheme with a modified background color.
 - Has some opinionated choices such as enabling scrollbar and disabling the new tab button.
