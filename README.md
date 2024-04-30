@@ -9,4 +9,5 @@
 - `CTRL+SHIFT+h/v` - Horizontal/Veritcal splits on the current pane.
 - `CTRL+SHIFT+w` - Close current pane.
 - `CTRL+SHIFT+c` - Clear the current view.
-- `CTRL+ALT+h/j/k/l` - Resize current pane (uses vim bindings).
+- `CTRL+ALT+←/↓/↑/→` - Resize current pane (uses vim bindings).
+- `CTRL+ALT+1~8` - Move current tab to the specified position
