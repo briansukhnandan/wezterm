@@ -1,4 +1,5 @@
 # WezTerm
+My preferred shell setup, for professional work and personal projects alike
 
 ## Installation
 - `git clone $URL && mv wezterm/.wezterm.lua ~/ && rm -r wezterm/`
